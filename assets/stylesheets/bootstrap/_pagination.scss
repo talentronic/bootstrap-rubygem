@@ -52,22 +52,22 @@
     outline: $pagination-focus-outline;
     box-shadow: var(--#{$prefix}pagination-focus-box-shadow);
   }
+}
 
-  &.active,
-  .active > & {
-    z-index: 3;
-    color: var(--#{$prefix}pagination-active-color);
-    @include gradient-bg(var(--#{$prefix}pagination-active-bg));
-    border-color: var(--#{$prefix}pagination-active-border-color);
-  }
+.page-link.active,
+.active > .page-link {
+  z-index: 3;
+  color: var(--#{$prefix}pagination-active-color);
+  @include gradient-bg(var(--#{$prefix}pagination-active-bg));
+  border-color: var(--#{$prefix}pagination-active-border-color);
+}
 
-  &.disabled,
-  .disabled > & {
-    color: var(--#{$prefix}pagination-disabled-color);
-    pointer-events: none;
-    background-color: var(--#{$prefix}pagination-disabled-bg);
-    border-color: var(--#{$prefix}pagination-disabled-border-color);
-  }
+.page-link.disabled,
+.disabled > .page-link {
+  color: var(--#{$prefix}pagination-disabled-color);
+  pointer-events: none;
+  background-color: var(--#{$prefix}pagination-disabled-bg);
+  border-color: var(--#{$prefix}pagination-disabled-border-color);
 }
 
 .page-item {
